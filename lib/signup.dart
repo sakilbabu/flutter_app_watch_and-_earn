@@ -49,6 +49,7 @@ class _signupState extends State<signup> {
                   Container( width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.all(10),
                     child: TextField(
+                      keyboardType: TextInputType.name,
                       controller: nameController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -59,6 +60,7 @@ class _signupState extends State<signup> {
                   ),Container( width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.all(10),
                     child: TextField(
+                      keyboardType: TextInputType.name,
                       controller: nameController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -70,6 +72,7 @@ class _signupState extends State<signup> {
                   Container( width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.all(10),
                     child: TextField(
+                      keyboardType: TextInputType.emailAddress,
                       controller: nameController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -82,6 +85,7 @@ class _signupState extends State<signup> {
                   Container( width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                     child: TextField(
+                      keyboardType: TextInputType.visiblePassword,
                       obscureText: true,
                       controller: passwordController,
                       decoration: InputDecoration(

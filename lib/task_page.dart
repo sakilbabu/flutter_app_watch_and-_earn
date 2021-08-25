@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:watch_and_earn/ballance.dart';
+import 'package:watch_and_earn/profile.dart';
 import 'package:watch_and_earn/web.dart';
+
+import 'drawer.dart';
 
 class taskpage extends StatefulWidget {
   const taskpage({Key? key}) : super(key: key);
@@ -47,12 +50,6 @@ class _taskpageState extends State<taskpage> {
           });
           return Scaffold(
               appBar: AppBar(
-                leading: IconButton(
-                  onPressed: () {
-                    Icon(Icons.menu);
-                  },
-                  icon: Icon(Icons.menu),
-                ),
                 title: const Text("Watch & earn"),
                 bottom: TabBar(
                   indicator: BoxDecoration(
@@ -75,9 +72,15 @@ class _taskpageState extends State<taskpage> {
                         Icons.person,
                         size: 30,
                       ),
-                      onPressed: () {}),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => profile()),
+                        );
+                      }),
                 ],
               ),
+              drawer: dwr(),
               body: TabBarView(
                 children: [
                   Center(
@@ -112,7 +115,7 @@ class _taskpageState extends State<taskpage> {
                                             Navigator.push(
                                               context,
                                               MaterialPageRoute(
-                                                  builder: (context) =>  web()),
+                                                  builder: (context) => web()),
                                             );
                                           },
                                         ),
