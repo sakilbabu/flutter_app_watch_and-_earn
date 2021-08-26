@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:watch_and_earn/ballance.dart';
 import 'package:watch_and_earn/profile.dart';
-import 'package:watch_and_earn/web.dart';
 
 import 'drawer.dart';
 
@@ -111,13 +110,7 @@ class _taskpageState extends State<taskpage> {
                                       children: <Widget>[
                                         RaisedButton(
                                           child: const Text('skip'),
-                                          onPressed: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) => web()),
-                                            );
-                                          },
+                                          onPressed: () {},
                                         ),
                                         InkWell(
                                           child: RaisedButton(

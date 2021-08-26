@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watch_and_earn/admin.dart';
 import 'package:watch_and_earn/ballance.dart';
 
 class LogoutOverlay extends StatefulWidget {
@@ -91,7 +92,13 @@ class LogoutOverlayState extends State<LogoutOverlay>
                                       fontSize: 13.0),
                                 ),
                                 onPressed: () {
-                                  setState(() {});
+                                  setState(() {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => admin()),
+                                    );
+                                  });
                                 },
                               ))),
                     ],
